@@ -17,17 +17,16 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.rentalPropertiesController">
    <children>
       <TableView fx:id="dgvRentalProperties" prefHeight="268.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="PropertyType" />
-          <TableColumn prefWidth="75.0" text="City" />
-            <TableColumn prefWidth="75.0" text="Bedrooms" />
-            <TableColumn prefWidth="75.0" text="Bathrooms" />
-            <TableColumn prefWidth="75.0" text="OccupancyStatus" />
-            <TableColumn prefWidth="75.0" text="MonthlyRent" />
+          <TableColumn fx:id="propertyTypeColumn" prefWidth="75.0" text="PropertyType" />
+          <TableColumn fx:id="cityColumn" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="bedroomsColumn" prefWidth="75.0" text="Bedrooms" />
+            <TableColumn fx:id="bathroomsColumn" prefWidth="75.0" text="Bathrooms" />
+            <TableColumn fx:id="occupancyStatusColumn" prefWidth="75.0" text="OccupancyStatus" />
+            <TableColumn fx:id="monthlyRentColumn" prefWidth="75.0" text="MonthlyRent" />
         </columns>
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
