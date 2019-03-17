@@ -17,7 +17,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 //SolarDB table name tenants
-
+/*
+* Create table tenants(
+tenantID int Primary key AUTO_INCREMENT,
+tenantCode VARCHAR(7),
+tenantName varchar(255),
+tenantStatus varchar(255),
+tenantNumber varchar(255)
+)*/
 public class Tenants implements Initializable {
 
     @FXML
@@ -55,7 +62,7 @@ public class Tenants implements Initializable {
     @FXML
     private Button Close;
 
-    ObservableList<Tenant> tenant_List = FXCollections.observableArrayList();
+    private ObservableList<Tenant> tenant_List = FXCollections.observableArrayList();
 
     Connection connection;
 
@@ -106,7 +113,10 @@ public class Tenants implements Initializable {
 
     @FXML
     public void submit(ActionEvent event) {
-
+        if(txtTenantCode.getLength() < 7) return;//check if every textfield is filled
+        if(txtTenantName.getText().isEmpty()) return;
+        if(cbxMaritalStatus.getValue().isEmpty()) return;
+        if(txtContactNumber.getText().isEmpty()) return;
         String sql = "INSERT INTO tenants (TenantCode, TenantName, TenantStatus, TenantNumber) VALUES('"
                 +txtTenantCode.getText()+"','"
                 +txtTenantName.getText()+"','"
