@@ -18,7 +18,18 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
-
+/*
+create table RentalAllocations(
+ id int PRIMARY KEY AUTO_INCREMENT,
+ loc_Code varchar(12),
+    loc_Date Date,
+    prop_Code varchar(9),
+    tenantCode varchar(7),
+    start_Date date,
+    contract_length varchar(10),
+    monthlyRent int
+);
+ */
 public class RentalAllocations implements Initializable{
 
     @FXML
@@ -81,7 +92,7 @@ public class RentalAllocations implements Initializable{
     private ObservableList<String> contract_length;
     private ObservableList<Rent_Alloc> rent_List = FXCollections.observableArrayList();
     private Connection connection;
-
+    private LocalDate localDate;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         contract_length = FXCollections.observableArrayList(
@@ -95,7 +106,7 @@ public class RentalAllocations implements Initializable{
         );
         cbxContractLength.setItems(contract_length);
         dgvRentalAllocation.setColumnResizePolicy(TableView.UNCONSTRAINED_RESIZE_POLICY);
-        LocalDate localDate = LocalDate.now();
+        localDate = LocalDate.now();
         dtpDateAllocated.setValue(localDate);
         dtpStartDate.setValue(localDate);
 
@@ -141,6 +152,12 @@ public class RentalAllocations implements Initializable{
 
     @FXML
     void reset(ActionEvent event) {
+        txtAllocationCode.setText("___-____-___");
+        txtMonthlyRent.setText("0.00");
+        txtTenantCode.setText("___-___");
+        txtPropertyCode.setText("____-____");
+        dtpStartDate.setValue(localDate);
+        dtpDateAllocated.setValue(localDate);
 
     }
 

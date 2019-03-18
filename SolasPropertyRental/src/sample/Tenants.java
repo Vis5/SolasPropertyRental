@@ -107,7 +107,9 @@ public class Tenants implements Initializable {
     }
     @FXML
     void reset(ActionEvent event) {
-
+        txtContactNumber.setText("");
+        txtTenantName.setText("");
+        txtTenantCode.setText("___-___");
     }
 
 
