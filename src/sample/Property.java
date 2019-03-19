@@ -3,92 +3,103 @@ package sample;
 import javafx.beans.property.*;
 
 public class Property {
+    private int RentalPropertyID;
+    private String PropertyCode;
+    private String PropertyType;
+    private String Address;
+    private String City;
+    private String State;
+    private int ZIPCode;
+    private int Bedrooms;
+    private double Bathrooms;
+    private boolean HasCarpet;
+    private boolean HardWoodFloor;
+    private boolean IndoorGarage;
+    private boolean HasWasherDryer;
+    private boolean PetsAllowed;
+    private String OccupancyStatus;
+    private double MonthlyRent;
 
-    private final StringProperty propertyType;
-    private final StringProperty city;
-    private final DoubleProperty bedrooms;
-    private final DoubleProperty bathrooms;
-    private final StringProperty occupancyStatus;
-    private final DoubleProperty monthlyRent;;
+    public Property(int rentalPropertyID, String propertyCode, String propertyType, String address, String city, String state, int ZIPCode, int bedrooms, double bathrooms, boolean hasCarpet, boolean hardWoodFloor, boolean indoorGarage, boolean hasWasherDryer, boolean petsAllowed, String occupancyStatus, double monthlyRent) {
+        RentalPropertyID = rentalPropertyID;
+        PropertyCode = propertyCode;
+        PropertyType = propertyType;
+        Address = address;
+        City = city;
+        State = state;
+        this.ZIPCode = ZIPCode;
+        Bedrooms = bedrooms;
+        Bathrooms = bathrooms;
+        HasCarpet = hasCarpet;
+        HardWoodFloor = hardWoodFloor;
+        IndoorGarage = indoorGarage;
+        HasWasherDryer = hasWasherDryer;
+        PetsAllowed = petsAllowed;
+        OccupancyStatus = occupancyStatus;
+        MonthlyRent = monthlyRent;
+    }
 
-    public Property(String propertyType, String city, double bedrooms, double bathrooms, String occupancyStatus, double monthlyRent) {
-        this.propertyType = new SimpleStringProperty(propertyType);
-        this.city = new SimpleStringProperty(city);
-        this.bedrooms = new SimpleDoubleProperty(bedrooms);
-        this.bathrooms = new SimpleDoubleProperty(bathrooms);
-        this.occupancyStatus = new SimpleStringProperty(occupancyStatus);
-        this.monthlyRent = new SimpleDoubleProperty(monthlyRent);
+    public int getRentalPropertyID() {
+        return RentalPropertyID;
+    }
+
+    public String getPropertyCode() {
+        return PropertyCode;
     }
 
     public String getPropertyType() {
-        return propertyType.get();
+        return PropertyType;
     }
 
-    public StringProperty propertyTypeProperty() {
-        return propertyType;
-    }
-
-    public void setPropertyType(String propertyType) {
-        this.propertyType.set(propertyType);
+    public String getAddress() {
+        return Address;
     }
 
     public String getCity() {
-        return city.get();
+        return City;
     }
 
-    public StringProperty cityProperty() {
-        return city;
+    public String getState() {
+        return State;
     }
 
-    public void setCity(String city) {
-        this.city.set(city);
+    public int getZIPCode() {
+        return ZIPCode;
     }
 
-    public double getBedrooms() {
-        return bedrooms.get();
-    }
-
-    public DoubleProperty bedroomsProperty() {
-        return bedrooms;
-    }
-
-    public void setBedrooms(double bedrooms) {
-        this.bedrooms.set(bedrooms);
+    public int getBedrooms() {
+        return Bedrooms;
     }
 
     public double getBathrooms() {
-        return bathrooms.get();
+        return Bathrooms;
     }
 
-    public DoubleProperty bathroomsProperty() {
-        return bathrooms;
+    public boolean getHasCarpet() {
+        return HasCarpet;
     }
 
-    public void setBathrooms(double bathrooms) {
-        this.bathrooms.set(bathrooms);
+    public boolean isHardWoodFloor() {
+        return HardWoodFloor;
+    }
+
+    public boolean isIndoorGarage() {
+        return IndoorGarage;
+    }
+
+    public boolean isHasWasherDryer() {
+        return HasWasherDryer;
+    }
+
+    public boolean isPetsAllowed() {
+        return PetsAllowed;
     }
 
     public String getOccupancyStatus() {
-        return occupancyStatus.get();
-    }
-
-    public StringProperty occupancyStatusProperty() {
-        return occupancyStatus;
-    }
-
-    public void setOccupancyStatus(String occupancyStatus) {
-        this.occupancyStatus.set(occupancyStatus);
+        return OccupancyStatus;
     }
 
     public double getMonthlyRent() {
-        return monthlyRent.get();
-    }
-
-    public DoubleProperty monthlyRentProperty() {
-        return monthlyRent;
-    }
-
-    public void setMonthlyRent(double monthlyRent) {
-        this.monthlyRent.set(monthlyRent);
+        return MonthlyRent;
     }
 }
