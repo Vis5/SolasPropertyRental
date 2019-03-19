@@ -13,7 +13,7 @@ public class Property {
     private int Bedrooms;
     private double Bathrooms;
     private boolean HasCarpet;
-    private boolean HardWoodFloor;
+    private boolean HardwoodFloor;
     private boolean IndoorGarage;
     private boolean HasWasherDryer;
     private boolean PetsAllowed;
@@ -31,7 +31,7 @@ public class Property {
         Bedrooms = bedrooms;
         Bathrooms = bathrooms;
         HasCarpet = hasCarpet;
-        HardWoodFloor = hardWoodFloor;
+        HardwoodFloor = hardWoodFloor;
         IndoorGarage = indoorGarage;
         HasWasherDryer = hasWasherDryer;
         PetsAllowed = petsAllowed;
@@ -79,8 +79,8 @@ public class Property {
         return HasCarpet;
     }
 
-    public boolean isHardWoodFloor() {
-        return HardWoodFloor;
+    public boolean isHardwoodFloor() {
+        return HardwoodFloor;
     }
 
     public boolean isIndoorGarage() {

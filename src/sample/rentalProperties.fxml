@@ -21,10 +21,20 @@
    <children>
       <TableView fx:id="dgvRentalProperties" prefHeight="268.0" prefWidth="600.0">
         <columns>
-          <TableColumn fx:id="propertyTypeColumn" prefWidth="75.0" text="PropertyType" />
-          <TableColumn fx:id="cityColumn" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="rentalPropertyIDColumn" prefWidth="75.0" text="RentalPropertyID" />
+            <TableColumn fx:id="propertyCodeColumn" prefWidth="75.0" text="PropertyCode" />
+            <TableColumn fx:id="propertyTypeColumn" prefWidth="75.0" text="PropertyType" />
+            <TableColumn fx:id="addressColumn" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="cityColumn" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="stateColumn" prefWidth="75.0" text="State" />
+            <TableColumn fx:id="zipCodeColumn" prefWidth="75.0" text="ZIPCode" />
             <TableColumn fx:id="bedroomsColumn" prefWidth="75.0" text="Bedrooms" />
             <TableColumn fx:id="bathroomsColumn" prefWidth="75.0" text="Bathrooms" />
+            <TableColumn fx:id="hasCarpetColumn" prefWidth="75.0" text="HasCarpet" />
+            <TableColumn fx:id="hardwoodFloorColumn" prefWidth="75.0" text="HardwoodFloor" />
+            <TableColumn fx:id="indoorGarageColumn" prefWidth="75.0" text="IndoorGarage" />
+            <TableColumn fx:id="hasWasherDryerColumn" prefWidth="75.0" text="HasWasherDryer" />
+            <TableColumn fx:id="petsAllowedColumn" prefWidth="75.0" text="PetsAllowed" />
             <TableColumn fx:id="occupancyStatusColumn" prefWidth="75.0" text="OccupancyStatus" />
             <TableColumn fx:id="monthlyRentColumn" prefWidth="75.0" text="MonthlyRent" />
         </columns>
@@ -85,44 +95,44 @@
                   </Button>
                   <TilePane maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" tileAlignment="CENTER_LEFT" vgap="5.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="1">
                      <children>
-                        <CheckBox mnemonicParsing="false" text="RentalPropertyID" />
-                        <CheckBox mnemonicParsing="false" text="ZIPCode" />
-                        <CheckBox mnemonicParsing="false" text="IndoorGarage" />
-                        <CheckBox mnemonicParsing="false" text="PropertyCode" />
-                        <CheckBox mnemonicParsing="false" text="Bedrooms" />
-                        <CheckBox mnemonicParsing="false" text="HasWasherDryer" />
-                        <CheckBox mnemonicParsing="false" text="Property Type" />
-                        <CheckBox mnemonicParsing="false" text="Bathrooms" />
-                        <CheckBox mnemonicParsing="false" text="PetsAllowed" />
-                        <CheckBox mnemonicParsing="false" text="Address" />
-                        <CheckBox mnemonicParsing="false" text="HasCarpet" />
-                        <CheckBox mnemonicParsing="false" text="OccupancyStatus" />
-                        <CheckBox mnemonicParsing="false" text="City" />
-                        <CheckBox mnemonicParsing="false" text="HasAirCondition" />
-                        <CheckBox mnemonicParsing="false" text="MonthlyRent" />
-                        <CheckBox mnemonicParsing="false" text="State" />
-                        <CheckBox mnemonicParsing="false" text="HardWoodFloor" />
+                        <CheckBox mnemonicParsing="false" text="RentalPropertyID" fx:id="some1"/>
+                        <CheckBox mnemonicParsing="false" text="ZIPCode" fx:id="some7" />
+                        <CheckBox mnemonicParsing="false" text="IndoorGarage" fx:id="some12" />
+                        <CheckBox mnemonicParsing="false" text="PropertyCode" fx:id="some2" />
+                        <CheckBox mnemonicParsing="false" text="Bedrooms" fx:id="some8" />
+                        <CheckBox mnemonicParsing="false" text="HasWasherDryer" fx:id="some13" />
+                        <CheckBox mnemonicParsing="false" text="Property Type" fx:id="some3" />
+                        <CheckBox mnemonicParsing="false" text="Bathrooms" fx:id="some9" />
+                        <CheckBox mnemonicParsing="false" text="PetsAllowed" fx:id="some14" />
+                        <CheckBox mnemonicParsing="false" text="Address" fx:id="some4" />
+                        <CheckBox mnemonicParsing="false" text="HasCarpet" fx:id="some10" />
+                        <CheckBox mnemonicParsing="false" text="OccupancyStatus" fx:id="some15" />
+                        <CheckBox mnemonicParsing="false" text="City" fx:id="some5" />
+                        <!--<CheckBox mnemonicParsing="false" text="HasAirCondition" fx:id="some11" />-->
+                        <CheckBox mnemonicParsing="false" text="MonthlyRent" fx:id="some16" />
+                        <CheckBox mnemonicParsing="false" text="State" fx:id="some6" />
+                        <CheckBox mnemonicParsing="false" text="HardWoodFloor" fx:id="some11" />
                      </children>
                   </TilePane>
                   <TilePane maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" tileAlignment="CENTER_LEFT" vgap="5.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2">
                      <children>
-                        <CheckBox mnemonicParsing="false" text="RentalPropertyID" />
-                        <CheckBox mnemonicParsing="false" text="ZIPCode" />
-                        <CheckBox mnemonicParsing="false" text="IndoorGarage" />
-                        <CheckBox mnemonicParsing="false" text="PropertyCode" />
-                        <CheckBox mnemonicParsing="false" text="Bedrooms" />
-                        <CheckBox mnemonicParsing="false" text="HasWasherDryer" />
-                        <CheckBox mnemonicParsing="false" text="Property Type" />
-                        <CheckBox mnemonicParsing="false" text="Bathrooms" />
-                        <CheckBox mnemonicParsing="false" text="PetsAllowed" />
-                        <CheckBox mnemonicParsing="false" text="Address" />
-                        <CheckBox mnemonicParsing="false" text="HasCarpet" />
-                        <CheckBox mnemonicParsing="false" text="OccupancyStatus" />
-                        <CheckBox mnemonicParsing="false" text="City" />
-                        <CheckBox mnemonicParsing="false" text="HasAirCondition" />
-                        <CheckBox mnemonicParsing="false" text="MonthlyRent" />
-                        <CheckBox mnemonicParsing="false" text="State" />
-                        <CheckBox mnemonicParsing="false" text="HardWoodFloor" />
+                         <CheckBox mnemonicParsing="false" text="RentalPropertyID" fx:id="dist1"/>
+                         <CheckBox mnemonicParsing="false" text="ZIPCode" fx:id="dist7" />
+                         <CheckBox mnemonicParsing="false" text="IndoorGarage" fx:id="dist12" />
+                         <CheckBox mnemonicParsing="false" text="PropertyCode" fx:id="dist2" />
+                         <CheckBox mnemonicParsing="false" text="Bedrooms" fx:id="dist8" />
+                         <CheckBox mnemonicParsing="false" text="HasWasherDryer" fx:id="dist13" />
+                         <CheckBox mnemonicParsing="false" text="Property Type" fx:id="dist3" />
+                         <CheckBox mnemonicParsing="false" text="Bathrooms" fx:id="dist9" />
+                         <CheckBox mnemonicParsing="false" text="PetsAllowed" fx:id="dist14" />
+                         <CheckBox mnemonicParsing="false" text="Address" fx:id="dist4" />
+                         <CheckBox mnemonicParsing="false" text="HasCarpet" fx:id="dist10" />
+                         <CheckBox mnemonicParsing="false" text="OccupancyStatus" fx:id="dist15" />
+                         <CheckBox mnemonicParsing="false" text="City" fx:id="dist5" />
+                         <!--<CheckBox mnemonicParsing="false" text="HasAirCondition" fx:id="dist11" />-->
+                         <CheckBox mnemonicParsing="false" text="MonthlyRent" fx:id="dist16" />
+                         <CheckBox mnemonicParsing="false" text="State" fx:id="dist6" />
+                         <CheckBox mnemonicParsing="false" text="HardWoodFloor" fx:id="dist11" />
                      </children>
                   </TilePane>
                </children>
