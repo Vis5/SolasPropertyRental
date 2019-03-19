@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.rentalPropertiesController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.rentalPropertiesController">
    <children>
       <TableView fx:id="dgvRentalProperties" prefHeight="268.0" prefWidth="600.0">
         <columns>
@@ -47,7 +47,7 @@
       </TableView>
       <AnchorPane>
          <children>
-            <GridPane layoutY="17.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="380.0" prefWidth="680.0" styleClass="border" stylesheets="@res/border.css" AnchorPane.topAnchor="10.0">
+            <GridPane layoutY="17.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="380.0" prefWidth="680.0" styleClass="border" stylesheets="@../res/border.css" AnchorPane.topAnchor="10.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="143.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="171.0" />

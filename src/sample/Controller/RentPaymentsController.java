@@ -1,4 +1,4 @@
-package sample;
+package sample.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +22,7 @@ public class RentPaymentsController {
 
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("newPayment.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../Views/newPayment.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Solas Property Rental - New Payment");
             stage.setScene(new Scene(root, 700, 320));

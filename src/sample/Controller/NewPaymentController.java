@@ -1,10 +1,10 @@
-package sample;
+package sample.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 
-public class propertyEditorController {
+public class NewPaymentController {
 
     @FXML
     void close(ActionEvent event) {

@@ -1,4 +1,4 @@
-package sample;
+package sample.Controller;
 
 import connectivity.ConnectionClass;
 import javafx.collections.FXCollections;
@@ -6,20 +6,19 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sample.Main;
+import sample.Model.Property;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 /*
 CREATE TABLE RentalProperties(
@@ -144,7 +143,7 @@ public class rentalPropertiesController {
     void newProperty(ActionEvent event) {
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("propertyEditor.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../Views/propertyEditor.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Rental Property");
             stage.setScene(new Scene(root, 600, 400));
