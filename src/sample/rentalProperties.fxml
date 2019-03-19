@@ -149,7 +149,7 @@
       </AnchorPane>
       <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
          <children>
-            <Button fx:id="btnNewProperty" mnemonicParsing="false" text="New Property..." />
+            <Button fx:id="btnNewProperty" mnemonicParsing="false" onAction="#newProperty" text="New Property..." />
             <Button fx:id="btnClose" mnemonicParsing="false" onAction="#close" text="Close" />
          </children>
          <VBox.margin>
