@@ -4,6 +4,7 @@ import connectivity.ConnectionClass;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import sample.Main;
 import sample.Model.Property;
 
@@ -148,6 +150,12 @@ public class rentalPropertiesController {
             stage.setTitle("Solas Property Rental - New Rental Property");
             stage.setScene(new Scene(root, 600, 400));
             stage.show();
+            stage.setOnHidden(new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent windowEvent) {
+                    updateTable();
+                }
+            });
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -156,6 +164,10 @@ public class rentalPropertiesController {
 
     @FXML
     void execute(ActionEvent event) {
+        updateTable();
+    }
+
+    private void updateTable(){
         dgvRentalProperties.getColumns().removeAll(dgvRentalProperties.getColumns());
         if (rdoShowAllFields.isSelected()) {
             dgvRentalProperties.getColumns().addAll(rentalPropertyIDColumn, propertyCodeColumn, propertyTypeColumn,

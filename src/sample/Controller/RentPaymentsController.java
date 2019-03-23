@@ -4,6 +4,7 @@ import connectivity.ConnectionClass;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,6 +15,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import sample.Model.Payment;
 import sample.Model.Tenant;
 
@@ -71,6 +73,14 @@ public class RentPaymentsController implements Initializable {
             stage.setTitle("Solas Property Rental - New Payment");
             stage.setScene(new Scene(root, 700, 320));
             stage.show();
+            stage.setOnHidden(new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent windowEvent) {
+                    System.out.println("Hidd");
+                    updateTable();
+
+                }
+            });
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -91,6 +101,12 @@ public class RentPaymentsController implements Initializable {
         ColTenantName.setCellValueFactory(new PropertyValueFactory<>("TenantName"));
         ColContactNo.setCellValueFactory(new PropertyValueFactory<>("ContactNo"));
         connection = new ConnectionClass().getConnection();
+        updateTable();
+        TablePayment.setItems(payment_List);
+    }
+
+    public void updateTable(){
+        payment_List.removeAll(payment_List);
         try {
             ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Payments");
 
@@ -110,6 +126,5 @@ public class RentPaymentsController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        TablePayment.setItems(payment_List);
     }
 }

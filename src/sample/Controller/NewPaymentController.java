@@ -91,6 +91,10 @@ public class NewPaymentController implements Initializable {
     public void submit(ActionEvent event) {
         if(txtTenantCode.getLength() < 6) return;//check if every textfield is filled
         if(txtTenantName.getText().isEmpty()) return;
+        if(txtReceiptNumber.getText().isEmpty()) return;
+        if(txtAmountPaid.getText().isEmpty()) return;
+        if(txtMonthlyRent.getText().isEmpty()) return;
+
         String sql = "INSERT INTO Payments VALUES("
                 +txtReceiptNumber.getText()+",'"
                 +dtpPaymentDate.getValue().toString()+"','"
