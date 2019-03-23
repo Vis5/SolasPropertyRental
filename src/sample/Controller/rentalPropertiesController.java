@@ -145,7 +145,7 @@ public class rentalPropertiesController {
         try {
             root = FXMLLoader.load(getClass().getResource("../Views/propertyEditor.fxml"));
             Stage stage = new Stage();
-            stage.setTitle("Rental Property");
+            stage.setTitle("Solas Property Rental - New Rental Property");
             stage.setScene(new Scene(root, 600, 400));
             stage.show();
         }
