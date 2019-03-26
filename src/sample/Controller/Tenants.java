@@ -142,6 +142,7 @@ public class Tenants implements Initializable {
             e.printStackTrace();
         }
         try {
+            tenant_List.removeAll(tenant_List);
             ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM TENANTS");
             tenant_List.removeAll();
             while(rs.next()){

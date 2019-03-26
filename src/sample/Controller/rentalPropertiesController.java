@@ -218,7 +218,7 @@ public class rentalPropertiesController {
             }
             String distinct = "";
             if (rdoShowDistinct.isSelected()) {
-                asc += "DISTINCT";
+                asc += " DISTINCT";
             }
             ResultSet rs = connection.createStatement().executeQuery("SELECT "+distinct+" * FROM RentalProperties ORDER BY " + cbxColumns.getSelectionModel().getSelectedItem() + " " + asc);
 

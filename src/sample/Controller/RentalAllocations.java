@@ -189,7 +189,7 @@ public class RentalAllocations implements Initializable{
         }
         try {
             ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM RentalAllocations");
-            rent_List.removeAll();
+            rent_List.removeAll(rent_List);
             while (rs.next()) {
                 rent_List.add(
                         new Rent_Alloc(

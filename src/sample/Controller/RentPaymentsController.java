@@ -71,7 +71,7 @@ public class RentPaymentsController implements Initializable {
             root = FXMLLoader.load(getClass().getResource("../Views/newPayment.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Solas Property Rental - New Payment");
-            stage.setScene(new Scene(root, 700, 320));
+            stage.setScene(new Scene(root, 740, 280));
             stage.show();
             stage.setOnHidden(new EventHandler<WindowEvent>() {
                 @Override

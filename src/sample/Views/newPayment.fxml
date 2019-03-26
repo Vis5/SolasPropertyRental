@@ -45,7 +45,7 @@
                 <TextField fx:id="txtReceiptNumber" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="80.0" promptText="0" GridPane.columnIndex="1" />
                 <MaskedTextField fx:id="txtAllocationCode" mask="###-###" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="80.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                 <DatePicker fx:id="dtpPaymentDate" promptText="Monday , July , 2010" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Label text="Payment for :" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <!--<Label text="Payment for :" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
@@ -58,7 +58,7 @@
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin>
-                </ChoiceBox>
+                </ChoiceBox>-->
                 <Label text="Amount Paid :" GridPane.columnIndex="4" GridPane.rowIndex="2">
                     <GridPane.margin>
                         <Insets left="5.0" />
